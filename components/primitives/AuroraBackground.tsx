@@ -19,7 +19,7 @@ export function AuroraBackground({
       className={cn("pointer-events-none absolute inset-0 overflow-hidden", className)}
     >
       <div
-        className="absolute -top-1/3 left-1/2 h-[55rem] w-[55rem] -translate-x-1/2 rounded-full blur-[120px] animate-[aurora_18s_ease-in-out_infinite_alternate]"
+        className="absolute -top-1/3 left-1/2 h-[55rem] w-[55rem] -translate-x-1/2 rounded-full blur-[40px] sm:blur-[120px] animate-[aurora_18s_ease-in-out_infinite_alternate]"
         style={{
           opacity,
           background:
@@ -27,7 +27,7 @@ export function AuroraBackground({
         }}
       />
       <div
-        className="absolute top-[10%] -left-[10%] h-[40rem] w-[40rem] rounded-full blur-[120px] animate-[aurora_22s_ease-in-out_infinite_alternate]"
+        className="absolute top-[10%] -left-[10%] h-[40rem] w-[40rem] rounded-full blur-[40px] sm:blur-[120px] animate-[aurora_22s_ease-in-out_infinite_alternate]"
         style={{
           opacity: opacity * 0.9,
           background:
@@ -35,7 +35,7 @@ export function AuroraBackground({
         }}
       />
       <div
-        className="absolute top-[5%] -right-[10%] h-[42rem] w-[42rem] rounded-full blur-[130px] animate-[aurora_26s_ease-in-out_infinite_alternate]"
+        className="absolute top-[5%] -right-[10%] h-[42rem] w-[42rem] rounded-full blur-[50px] sm:blur-[130px] animate-[aurora_26s_ease-in-out_infinite_alternate]"
         style={{
           opacity: opacity * 0.8,
           background:
