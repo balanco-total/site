@@ -14,7 +14,7 @@ export function Features() {
         <SectionHeading
           badge="Recursos"
           title="Tudo o que você precisa. Nada que você não usa."
-          subtitle="Foco total no controle pessoal de gastos — do lançamento manual à conexão automática com o banco."
+          subtitle="Foco total no controle pessoal de gastos - do lançamento manual à conexão automática com o banco."
         />
 
         <motion.div

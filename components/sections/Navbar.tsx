@@ -35,7 +35,7 @@ export function Navbar() {
             : "border border-transparent bg-transparent",
         )}
       >
-        <a href="#top" className="flex items-center" aria-label="BalançoTotal">
+        <a href="/" className="flex items-center" aria-label="BalançoTotal">
           <Logo height={28} />
         </a>
 

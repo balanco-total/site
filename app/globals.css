@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ============================================================
-   BalançoTotal — Design System
+   BalançoTotal - Design System
    Dark premium • Emerald + Teal • Aurora • Glass
    ============================================================ */
 
@@ -18,7 +18,7 @@
   --color-muted: #a8b0ba;
   --color-faint: #8b95a1;
 
-  /* Accent — emerald / teal / cyan */
+  /* Accent - emerald / teal / cyan */
   --color-emerald: #10b981;
   --color-emerald-bright: #34d399;
   --color-teal: #2dd4bf;
@@ -217,7 +217,7 @@ body {
 }
 
 /* ============================================================
-   Accessibility — reduced motion
+   Accessibility - reduced motion
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
   *,

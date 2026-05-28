@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 /**
- * Performant CSS aurora — layered blurred radial gradients.
+ * Performant CSS aurora - layered blurred radial gradients.
  * Animation auto-disables under prefers-reduced-motion (see globals.css).
  */
 export function AuroraBackground({

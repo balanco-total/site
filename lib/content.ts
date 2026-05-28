@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 
 /* ============================================================
-   BalançoTotal — Conteúdo central da landing page
+   BalançoTotal - Conteúdo central da landing page
    Toda a copy e os dados vivem aqui. Os blocos marcados com
    ⚠️ PLACEHOLDER são fictícios e devem ser trocados pelos reais.
    ============================================================ */
@@ -39,11 +39,11 @@ export const HERO = {
   headline: "Saiba para onde o seu dinheiro vai",
   headlineHighlight: [3, 4, 5, 6], // "o seu dinheiro vai"
   subline:
-    "Pare de adivinhar. O BalançoTotal reúne seus gastos, importa extratos e conecta seus bancos para mostrar, em segundos, quanto entra, quanto sai e o que sobra — sem planilha e sem complicação.",
+    "Pare de adivinhar. O BalançoTotal reúne seus gastos, importa extratos e conecta seus bancos para mostrar, em segundos, quanto entra, quanto sai e o que sobra - sem planilha e sem complicação.",
   trust: ["Sem cartão de crédito", "34 dias grátis", "Cancele quando quiser"],
 };
 
-/* ⚠️ PLACEHOLDER — logos fictícios de instituições/parceiros. */
+/* ⚠️ PLACEHOLDER - logos fictícios de instituições/parceiros. */
 export const LOGO_CLOUD = {
   label: "Compatível com mais de 200 instituições via Open Finance",
   logos: ["Nubank", "Itaú", "Bradesco", "Banco do Brasil", "Inter", "C6 Bank", "Santander", "Caixa"],
@@ -53,7 +53,7 @@ export const BENEFITS: { icon: LucideIcon; title: string; text: string }[] = [
   {
     icon: Sparkles,
     title: "Simples de verdade",
-    text: "Do zero ao controle em minutos. Sem configuração complexa, sem termos contábeis — feito para pessoas, não para contadores.",
+    text: "Do zero ao controle em minutos. Sem configuração complexa, sem termos contábeis - feito para pessoas, não para contadores.",
   },
   {
     icon: PieChart,
@@ -63,7 +63,7 @@ export const BENEFITS: { icon: LucideIcon; title: string; text: string }[] = [
   {
     icon: Users,
     title: "Pensado para a família",
-    text: "Compartilhe com quem mora com você. Cada um lança o seu, todos veem o todo — sem misturar as finanças de ninguém.",
+    text: "Compartilhe com quem mora com você. Cada um lança o seu, todos veem o todo - sem misturar as finanças de ninguém.",
   },
   {
     icon: Sparkles,
@@ -99,7 +99,7 @@ export const FEATURES: {
   {
     icon: LineChart,
     title: "Dashboard em tempo real",
-    text: "Saldo do mês, entradas, saídas e o que sobra — atualizado a cada lançamento, num painel limpo e direto.",
+    text: "Saldo do mês, entradas, saídas e o que sobra - atualizado a cada lançamento, num painel limpo e direto.",
     span: "wide",
   },
   {
@@ -157,16 +157,16 @@ export const AUTOMATION = {
   ],
 };
 
-/* ⚠️ PLACEHOLDER — bancos exibidos no grid de integrações. */
+/* ⚠️ PLACEHOLDER - bancos exibidos no grid de integrações. */
 export const INTEGRATIONS = {
   badge: "Open Finance",
   title: "Conecte seu banco e sincronize sozinho",
   subtitle:
-    "Mais de 200 instituições financeiras brasileiras suportadas. Conecte uma vez e suas transações entram automaticamente — sem digitar nada.",
+    "Mais de 200 instituições financeiras brasileiras suportadas. Conecte uma vez e suas transações entram automaticamente - sem digitar nada.",
   banks: ["Nubank", "Itaú", "Bradesco", "Banco do Brasil", "Inter", "C6 Bank", "Santander", "Caixa", "PicPay", "Mercado Pago", "BTG", "Sicoob"],
 };
 
-/* ⚠️ PLACEHOLDER — métricas fictícias para prova social. */
+/* ⚠️ PLACEHOLDER - métricas fictícias para prova social. */
 export const RESULTS = [
   { value: 38, suffix: "%", label: "de economia média no 1º trimestre de uso" },
   { value: 12000, prefix: "+", label: "famílias organizando as contas juntas" },
@@ -174,7 +174,7 @@ export const RESULTS = [
   { value: 4.9, decimals: 1, suffix: "/5", label: "nota média de satisfação" },
 ];
 
-/* ⚠️ PLACEHOLDER — cases fictícios. */
+/* ⚠️ PLACEHOLDER - cases fictícios. */
 export const CASES = [
   {
     metric: "R$ 740/mês",
@@ -196,7 +196,7 @@ export const CASES = [
   },
 ];
 
-/* ⚠️ PLACEHOLDER — depoimentos fictícios. */
+/* ⚠️ PLACEHOLDER - depoimentos fictícios. */
 export const TESTIMONIALS = [
   {
     quote:
@@ -218,7 +218,7 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "Simples do jeito que precisa ser. Não é um sistema contábil gigante — é exatamente o controle de gastos que eu queria, bonito e rápido.",
+      "Simples do jeito que precisa ser. Não é um sistema contábil gigante - é exatamente o controle de gastos que eu queria, bonito e rápido.",
     name: "Letícia Moraes",
     role: "Enfermeira",
   },
@@ -239,7 +239,7 @@ export const TESTIMONIALS = [
 export const PRICING = {
   badge: "Um plano. Simples assim.",
   title: "Tudo incluso. Sem surpresas na fatura.",
-  price: 7.9,
+  price: 7.99,
   period: "/mês",
   trial: "34 dias grátis · sem cartão de crédito",
   features: [
@@ -263,7 +263,7 @@ export const SECURITY = {
   title: "Seus dados protegidos do início ao fim",
   points: [
     { icon: ShieldCheck, title: "Autenticação JWT", text: "Sessões seguras via Supabase, com isolamento total entre contas." },
-    { icon: Landmark, title: "Row-Level Security", text: "Cada linha do banco é protegida individualmente — ninguém vê o que não é seu." },
+    { icon: Landmark, title: "Row-Level Security", text: "Cada linha do banco é protegida individualmente - ninguém vê o que não é seu." },
     { icon: Wallet, title: "Open Finance regulado", text: "Conexão somente leitura, dentro das regras do Banco Central." },
   ],
 };
@@ -272,7 +272,7 @@ export const FAQ = [
   {
     question: "O BalançoTotal é um sistema contábil ou ERP?",
     answer:
-      "Não. Ele é focado em controle de gastos pessoais e familiar. Nada de emissão de nota fiscal, estoque ou obrigações fiscais — só o essencial para você entender e organizar o seu dinheiro.",
+      "Não. Ele é focado em controle de gastos pessoais e familiar. Nada de emissão de nota fiscal, estoque ou obrigações fiscais - só o essencial para você entender e organizar o seu dinheiro.",
   },
   {
     question: "Preciso de cartão de crédito para testar?",
@@ -319,19 +319,10 @@ export const FOOTER = {
       ],
     },
     {
-      title: "Empresa",
-      links: [
-        { label: "Sobre", href: "#" },
-        { label: "Blog", href: "#" },
-        { label: "Contato", href: "#" },
-      ],
-    },
-    {
       title: "Legal",
       links: [
-        { label: "Termos de uso", href: "#" },
-        { label: "Privacidade", href: "#" },
-        { label: "Open Finance", href: "#" },
+        { label: "Termos de uso", href: "/terms" },
+        { label: "Privacidade", href: "/privacy" },
       ],
     },
   ],

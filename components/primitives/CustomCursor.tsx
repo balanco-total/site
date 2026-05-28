@@ -5,7 +5,7 @@ import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 /**
- * Premium trailing cursor — a glowing dot + a lagging ring that grows
+ * Premium trailing cursor - a glowing dot + a lagging ring that grows
  * over interactive elements. Desktop / fine-pointer only.
  */
 export function CustomCursor() {

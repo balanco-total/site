@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "BalançoTotal — Saiba para onde o dinheiro vai";
+export const alt = "BalançoTotal - Saiba para onde o dinheiro vai";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -68,7 +68,7 @@ export default function OG() {
             maxWidth: 820,
           }}
         >
-          Controle de gastos pessoal e familiar — sem planilha, sem complicação. 34 dias grátis.
+          Controle de gastos pessoal e familiar - sem planilha, sem complicação. 34 dias grátis.
         </div>
       </div>
     ),

@@ -22,7 +22,7 @@ const SITE_URL = "https://balancototal.com.br";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "BalançoTotal — Saiba para onde o dinheiro vai",
+    default: "BalançoTotal - Saiba para onde o dinheiro vai",
     template: "%s · BalançoTotal",
   },
   description:
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: SITE_URL,
     siteName: "BalançoTotal",
-    title: "BalançoTotal — Saiba para onde o dinheiro vai",
+    title: "BalançoTotal - Saiba para onde o dinheiro vai",
     description:
       "Controle de gastos pessoal e familiar, sem planilha e sem complicação. 34 dias grátis, sem cartão.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BalançoTotal — Saiba para onde o dinheiro vai",
+    title: "BalançoTotal - Saiba para onde o dinheiro vai",
     description:
       "Controle de gastos pessoal e familiar, sem planilha e sem complicação. 34 dias grátis, sem cartão.",
   },

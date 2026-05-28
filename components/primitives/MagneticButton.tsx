@@ -5,7 +5,7 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 /**
- * Magnetic wrapper — the child is pulled toward the cursor while hovered.
+ * Magnetic wrapper - the child is pulled toward the cursor while hovered.
  * Render it around a Button/link.
  */
 export function MagneticButton({

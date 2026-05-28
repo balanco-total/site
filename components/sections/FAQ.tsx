@@ -11,7 +11,7 @@ export function FAQ() {
           <SectionHeading
             badge="FAQ"
             title="Perguntas frequentes"
-            subtitle="Ainda com dúvida? Fale com a gente — respondemos por e-mail rapidinho."
+            subtitle="Ainda com dúvida? Fale com a gente - respondemos por e-mail rapidinho."
             align="left"
             className="lg:sticky lg:top-32 lg:self-start"
           />

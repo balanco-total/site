@@ -32,7 +32,7 @@ export function DashboardShowcase() {
           <SectionHeading
             badge="Dashboard"
             title="Um painel que você entende num relance"
-            subtitle="Sem ruído, sem termos técnicos. Só o que importa para você decidir melhor — bonito e direto."
+            subtitle="Sem ruído, sem termos técnicos. Só o que importa para você decidir melhor - bonito e direto."
             align="left"
           />
           <ul className="mt-8 flex flex-col gap-3">
