@@ -4,6 +4,8 @@ import "./globals.css";
 import { SmoothScroll } from "@/components/primitives/SmoothScroll";
 import { Noise } from "@/components/primitives/Noise";
 import { CustomCursor } from "@/components/primitives/CustomCursor";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -77,6 +79,8 @@ export default function RootLayout({
         <Noise />
         <CustomCursor />
         <SmoothScroll>{children}</SmoothScroll>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
