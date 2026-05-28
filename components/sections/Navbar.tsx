@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Wallet, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { NAV_LINKS, CTA } from "@/lib/content";
 import { ButtonLink } from "@/components/ui/Button";
+import { Logo } from "@/components/ui/Logo";
 import { MagneticButton } from "@/components/primitives/MagneticButton";
 import { cn } from "@/lib/utils";
 
@@ -34,11 +35,8 @@ export function Navbar() {
             : "border border-transparent bg-transparent",
         )}
       >
-        <a href="#top" className="flex items-center gap-2 font-semibold tracking-tight">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-emerald/15 text-emerald-bright">
-            <Wallet className="h-4.5 w-4.5" />
-          </span>
-          BalançoTotal
+        <a href="#top" className="flex items-center" aria-label="BalançoTotal">
+          <Logo height={28} />
         </a>
 
         <div className="hidden items-center gap-1 md:flex">

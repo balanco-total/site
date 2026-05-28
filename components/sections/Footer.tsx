@@ -1,6 +1,7 @@
-import { Wallet, AtSign, Send, Globe } from "lucide-react";
+import { AtSign, Send, Globe } from "lucide-react";
 import { FOOTER, CTA } from "@/lib/content";
 import { ButtonLink } from "@/components/ui/Button";
+import { Logo } from "@/components/ui/Logo";
 
 export function Footer() {
   return (
@@ -8,11 +9,8 @@ export function Footer() {
       <div className="container-x py-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_2fr]">
           <div>
-            <a href="#top" className="flex items-center gap-2 text-lg font-semibold tracking-tight">
-              <span className="grid h-8 w-8 place-items-center rounded-lg bg-emerald/15 text-emerald-bright">
-                <Wallet className="h-4.5 w-4.5" />
-              </span>
-              BalançoTotal
+            <a href="#top" className="flex items-center" aria-label="BalançoTotal">
+              <Logo height={32} />
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
               Controle de gastos pessoal e familiar, sem planilha e sem
