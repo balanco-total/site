@@ -5,15 +5,15 @@ import { Check, ArrowRight, Star } from "lucide-react";
 import { HERO, CTA } from "@/lib/content";
 import { AuroraBackground } from "@/components/primitives/AuroraBackground";
 import { GridBackground } from "@/components/primitives/GridBackground";
-import { TextReveal } from "@/components/primitives/TextReveal";
 import { MagneticButton } from "@/components/primitives/MagneticButton";
 import { ButtonLink } from "@/components/ui/Button";
 import { DashboardMockup } from "./DashboardMockup";
 import { useMousePosition } from "@/hooks/useMousePosition";
-import { EASE_OUT } from "@/lib/motion";
+import { cn } from "@/lib/utils";
 
 export function Hero() {
   const { nx, ny } = useMousePosition();
+  const words = HERO.headline.split(" ");
 
   return (
     <section
@@ -26,40 +26,42 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ground to-transparent" />
 
       <div className="container-x relative z-10 flex flex-col items-center text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: EASE_OUT }}
-          className="eyebrow mb-6"
-        >
+        <div className="eyebrow mb-6 fade-up-soft">
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-bright opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-bright" />
           </span>
           {HERO.badge}
-        </motion.div>
+        </div>
 
-        <TextReveal
-          text={HERO.headline}
-          highlight={HERO.headlineHighlight}
-          el="h1"
-          className="text-display mx-auto max-w-4xl text-balance text-5xl text-ink sm:text-6xl md:text-7xl"
-        />
+        <h1
+          className="text-display fade-up-soft mx-auto max-w-4xl text-balance text-5xl text-ink sm:text-6xl md:text-7xl"
+          style={{ animationDelay: "0.05s" }}
+        >
+          {words.map((word, i) => (
+            <span
+              key={i}
+              className={cn(
+                "inline-block",
+                HERO.headlineHighlight.includes(i) && "text-aurora",
+              )}
+            >
+              {word}
+              {i < words.length - 1 ? " " : ""}
+            </span>
+          ))}
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5, ease: EASE_OUT }}
-          className="mt-7 max-w-2xl text-pretty text-base leading-relaxed text-muted sm:text-lg"
+        <p
+          className="fade-up-soft mt-7 max-w-2xl text-pretty text-base leading-relaxed text-muted sm:text-lg"
+          style={{ animationDelay: "0.15s" }}
         >
           {HERO.subline}
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.65, ease: EASE_OUT }}
-          className="mt-9 flex flex-col items-center gap-3 sm:flex-row"
+        <div
+          className="fade-up-soft mt-9 flex flex-col items-center gap-3 sm:flex-row"
+          style={{ animationDelay: "0.25s" }}
         >
           <MagneticButton>
             <ButtonLink href={CTA.primary.href} variant="primary" size="lg" className="group">
@@ -70,14 +72,12 @@ export function Hero() {
           <ButtonLink href={CTA.secondary.href} variant="secondary" size="lg">
             {CTA.secondary.label}
           </ButtonLink>
-        </motion.div>
+        </div>
 
         {/* trust + social proof */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
-          className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:gap-7"
+        <div
+          className="fade-up-soft mt-8 flex flex-col items-center gap-4 sm:flex-row sm:gap-7"
+          style={{ animationDelay: "0.35s" }}
         >
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
             {HERO.trust.map((t) => (
@@ -98,15 +98,12 @@ export function Hero() {
               4,9/5 · +12 mil famílias
             </span>
           </div>
-        </motion.div>
+        </div>
 
         {/* floating mockup with mouse parallax */}
-        <motion.div
-          initial={{ opacity: 0, y: 60, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1.1, delay: 0.8, ease: EASE_OUT }}
-          className="relative mt-16 w-full max-w-3xl"
-          style={{ perspective: 1200 }}
+        <div
+          className="fade-up-soft relative mt-16 w-full max-w-3xl"
+          style={{ perspective: 1200, animationDelay: "0.3s" }}
         >
           <motion.div
             animate={{ rotateX: ny * -6, rotateY: nx * 8, y: nx * 0 }}
@@ -138,7 +135,7 @@ export function Hero() {
               <p className="text-sm font-medium text-ink">42 transações ✓</p>
             </div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

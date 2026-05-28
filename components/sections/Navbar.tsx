@@ -21,11 +21,8 @@ export function Navbar() {
   }, []);
 
   return (
-    <motion.header
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-3 sm:pt-4"
+    <header
+      className="fade-down-soft fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-3 sm:pt-4"
     >
       <nav
         className={cn(
@@ -100,6 +97,6 @@ export function Navbar() {
           </div>
         </motion.div>
       )}
-    </motion.header>
+    </header>
   );
 }

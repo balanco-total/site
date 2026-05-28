@@ -1,11 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import Lenis from "lenis";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
@@ -13,23 +8,50 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
       return;
     }
 
-    const lenis = new Lenis({
-      duration: 1.1,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      touchMultiplier: 1.5,
-    });
+    let cleanup: (() => void) | undefined;
+    let started = false;
 
-    // Bridge Lenis with GSAP ScrollTrigger.
-    lenis.on("scroll", ScrollTrigger.update);
+    const start = async () => {
+      if (started) return;
+      started = true;
+      const [{ default: Lenis }, { gsap }, { ScrollTrigger }] = await Promise.all([
+        import("lenis"),
+        import("gsap"),
+        import("gsap/ScrollTrigger"),
+      ]);
+      gsap.registerPlugin(ScrollTrigger);
 
-    const raf = (time: number) => lenis.raf(time * 1000);
-    gsap.ticker.add(raf);
-    gsap.ticker.lagSmoothing(0);
+      const lenis = new Lenis({
+        duration: 1.1,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+        touchMultiplier: 1.5,
+      });
+
+      lenis.on("scroll", ScrollTrigger.update);
+
+      const raf = (time: number) => lenis.raf(time * 1000);
+      gsap.ticker.add(raf);
+      gsap.ticker.lagSmoothing(0);
+
+      cleanup = () => {
+        gsap.ticker.remove(raf);
+        lenis.destroy();
+      };
+    };
+
+    const opts = { once: true, passive: true } as const;
+    window.addEventListener("pointermove", start, opts);
+    window.addEventListener("wheel", start, opts);
+    window.addEventListener("touchstart", start, opts);
+    window.addEventListener("keydown", start, opts);
 
     return () => {
-      gsap.ticker.remove(raf);
-      lenis.destroy();
+      window.removeEventListener("pointermove", start);
+      window.removeEventListener("wheel", start);
+      window.removeEventListener("touchstart", start);
+      window.removeEventListener("keydown", start);
+      cleanup?.();
     };
   }, []);
 
