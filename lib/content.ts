@@ -315,7 +315,6 @@ export const FOOTER = {
         { label: "Recursos", href: "#recursos" },
         { label: "Como funciona", href: "#como-funciona" },
         { label: "Preço", href: "#preco" },
-        { label: "Segurança", href: "#seguranca" },
       ],
     },
     {
