@@ -26,11 +26,11 @@ export const CTA = {
 };
 
 export const NAV_LINKS = [
-  { label: "Recursos", href: "#recursos" },
-  { label: "Como funciona", href: "#como-funciona" },
-  { label: "Automação", href: "#automacao" },
-  { label: "Preço", href: "#preco" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Recursos", href: "/#recursos" },
+  { label: "Como funciona", href: "/#como-funciona" },
+  { label: "Automação", href: "/#automacao" },
+  { label: "Preço", href: "/#preco" },
+  { label: "FAQ", href: "/#faq" },
 ];
 
 export const HERO = {
@@ -312,9 +312,9 @@ export const FOOTER = {
     {
       title: "Produto",
       links: [
-        { label: "Recursos", href: "#recursos" },
-        { label: "Como funciona", href: "#como-funciona" },
-        { label: "Preço", href: "#preco" },
+        { label: "Recursos", href: "/#recursos" },
+        { label: "Como funciona", href: "/#como-funciona" },
+        { label: "Preço", href: "/#preco" },
       ],
     },
     {
