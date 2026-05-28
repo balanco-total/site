@@ -41,10 +41,7 @@ export function Hero() {
           {words.map((word, i) => (
             <span
               key={i}
-              className={cn(
-                "inline-block",
-                HERO.headlineHighlight.includes(i) && "text-aurora",
-              )}
+              className={cn(HERO.headlineHighlight.includes(i) && "text-aurora")}
             >
               {word}
               {i < words.length - 1 ? " " : ""}
