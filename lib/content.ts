@@ -11,6 +11,7 @@ import {
   Landmark,
   Upload,
   LineChart,
+  CreditCard,
   type LucideIcon,
 } from "lucide-react";
 
@@ -116,6 +117,11 @@ export const FEATURES: {
     icon: Repeat,
     title: "Recorrentes e parcelas",
     text: "Aluguel, assinaturas e compras parceladas lançam sozinhos, mês após mês.",
+  },
+  {
+    icon: CreditCard,
+    title: "Cartões de crédito e faturas",
+    text: "Cadastre seus cartões e lance compras direto na fatura. Ela fecha sozinha no dia certo e você paga com um clique.",
   },
   {
     icon: Bell,
@@ -298,6 +304,11 @@ export const FAQ = [
     question: "Consigo importar o extrato do meu banco?",
     answer:
       "Sim. Aceitamos arquivos OFX e CSV, com detecção automática de delimitadores, e categorizamos as transações para você automaticamente.",
+  },
+  {
+    question: "Dá para controlar cartão de crédito?",
+    answer:
+      "Sim. Você cadastra cada cartão com limite, dia de fechamento e vencimento, e lança as compras (à vista ou parceladas) direto na fatura. A fatura fecha automaticamente no dia certo e, ao pagá-la, o valor é debitado da conta que você escolher.",
   },
 ];
 
